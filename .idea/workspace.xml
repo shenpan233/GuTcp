@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ca9a279-bb13-497c-9504-5b22493cd2e7" name="Default Changelist" comment="" />
+    <list default="true" id="6ca9a279-bb13-497c-9504-5b22493cd2e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,14 +84,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="494" y="283" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1618577711266" />
-    <state x="544" y="261" key="Github.ShareDialog" timestamp="1618577806454">
+    <state x="544" y="261" key="Github.ShareDialog" timestamp="1618577968572">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="544" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1618577806454" />
+    <state x="544" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1618577968572" />
+    <state x="544" y="68" key="Github.UntrackedFilesDialog" timestamp="1618578088573">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="544" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1618578088573" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1618577599260">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1618577599260" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618578152318">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618578152318" />
+    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618577957328">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1618577957328" />
     <state x="484" y="270" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1618577913712">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
