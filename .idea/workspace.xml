@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6ca9a279-bb13-497c-9504-5b22493cd2e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Socket/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Socket/proto.go" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/proto.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Socket/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/Pack/Pack.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/Pack/Pack.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,14 +71,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1618577851275">
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1618578329719">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1618577851275" />
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1618578329719" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1618577819868">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -96,10 +103,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1618577599260" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618578152318">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618578583311">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618578152318" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618578583311" />
     <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618577957328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

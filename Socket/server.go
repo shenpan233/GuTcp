@@ -3,8 +3,8 @@ package Socket
 import (
 	"errors"
 	"fmt"
-	"GuTcpSocket/util/Pack"
-	"GuTcpSocket/util/UnPack"
+	"github.com/shenpan233/guTcpSocket/util/Pack"
+	"github.com/shenpan233/guTcpSocket/util/UnPack"
 	"net"
 	"strconv"
 	"sync"

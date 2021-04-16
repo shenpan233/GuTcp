@@ -1,7 +1,7 @@
 package Pack
 
 import (
-	"AndroidQQ/src/util/tools"
+	"github.com/shenpan233/guTcpSocket/util/tools"
 )
 
 func Int8_to_buf(bArr *[]byte, i int8) {
