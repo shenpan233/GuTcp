@@ -68,6 +68,7 @@ func (t *GuTcpClient) UselessDataJoinCache(SsoSeq int32, data *[]byte) {
 
 //pullData 拉取封包
 func (t *GuTcpClient) pullData(SsoSeq, waitTime int32) []byte {
+	//异常处理，怕服务端不规则封包导致出问题
 	defer func() {
 		catch := recover()
 		if catch != nil {
@@ -92,7 +93,7 @@ type OnClientRecvHandlerFunc func(bin []byte)
 func (t *GuTcpClient) Listen(OnRecvHandlerFunc OnClientRecvHandlerFunc) {
 	t.wg.Add(1)
 
-	//异常捕获 你永远不知道客户发来的是什么
+	//异常捕获 你永远不知道发来的是什么
 	defer func() {
 		t.wg.Done()
 		catch := recover()
@@ -117,8 +118,8 @@ func (t *GuTcpClient) Listen(OnRecvHandlerFunc OnClientRecvHandlerFunc) {
 			if length == 0 {
 				break
 			}
-			Pack.Buf_Add(t.mbin, data[:length]) //粘包处理
-			for len(*t.mbin) >= 4 {             //这个4是开头的长度
+			Pack.BufAdd(t.mbin, data[:length]) //粘包处理
+			for len(*t.mbin) >= 4 {            //这个4是开头的长度
 				length2 = int(UnPack.BufToInt32(t.mbin) - 4)
 				if length >= 51200 { //50KB清空缓存
 					*t.mbin = nil

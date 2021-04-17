@@ -10,8 +10,8 @@ func Encode(message *[]byte) {
 	var length = int32(len(*message) + 4)
 	tmp := *message
 	*message = nil
-	Pack.Int32_to_buf(message, length)
-	Pack.Buf_Add(message, tmp)
+	Pack.Int32ToBuf(message, length)
+	Pack.BufAdd(message, tmp)
 
 	return
 }

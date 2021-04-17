@@ -25,23 +25,23 @@ type clientMsg struct {
 	cache []byte
 }
 
-//Creat 创建tcp服务,成功返回true,失败返回false并在控制台打印错误信息
-func (t *GuTcpServer) Creat(port int) bool {
+//Creat
+// 创建tcp服务,成功返回true,失败返回false并在控制台打印错误信息
+//	port 端口号
+func (t *GuTcpServer) Creat(port int) {
 	if t.user == nil {
 		t.userId = new(uint64)
 		t.user = new(sync.Map)
 	}
-
 	var err error
 	t.listener, err = net.Listen("tcp", ":"+strconv.Itoa(port))
 	if err == nil {
 		go t.accept()
-		return true
+		select {} //阻塞,主进程退出他才会退出
 	} else {
 		fmt.Println(err.Error())
-
-		return false
 	}
+
 }
 
 //SetHeartBoatTime 设置心跳时间
@@ -68,12 +68,13 @@ func (t *GuTcpServer) accept() {
 			go t.recv(uid)
 		}
 	}
+
 }
 
 //OnServerRecvHandlerFunc 接收参数回调程序
 // 	uid 用户标识id
 //	bin 已截取长度的封包
-type OnServerRecvHandlerFunc func(uid uint64, bin []byte)
+type OnServerRecvHandlerFunc func(userId uint64, bin []byte)
 
 //recv 接收数据
 func (t *GuTcpServer) recv(uid uint64) {
@@ -96,7 +97,7 @@ func (t *GuTcpServer) recv(uid uint64) {
 				dataLen := int(UnPack.BufToInt32(&data) - 4)
 				if dataLen > len(data) { //粘包(数据不足)
 					l, _ = conn.conn.Read(bin[:])
-					Pack.Buf_Add(&data, bin[:l])
+					Pack.BufAdd(&data, bin[:l])
 				}
 				go t.onRecvHandlerFunc(uid, UnPack.BufGet(&data, uint(dataLen)))
 
@@ -120,7 +121,8 @@ func (t *GuTcpServer) GroupSend(bin []byte) {
 
 //Send 发送数据给指定客户端
 //  --------------------------
-//  bin 会自动执行粘包编码Encode命令
+//	userId 用户id,OnServerRecvHandlerFunc方法会返回
+//  bin 会自动执行粘包处理Encode命令
 //  err 返回错误信息,nil就是发送成功
 func (t *GuTcpServer) Send(UserId uint64, bin []byte) (err error) {
 	if len(bin) == 0 {

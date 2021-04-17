@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/Socket/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/client.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Socket/proto.go" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/proto.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Socket/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util/Pack/Pack.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/Pack/Pack.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,25 +48,20 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <configuration name="go build github.com/shenpan233/guTcpSocket" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="guTcpSocket" />
       <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/shenpan233/guTcpSocket" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="guTcpSocket" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/shenpan233/guTcpSocket" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,16 +69,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="删了一些乐色文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="删了一些乐色文件" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1618578329719">
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1618578824778">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1618578329719" />
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1618578824778" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1618577819868">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -99,14 +96,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="544" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1618578088573" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1618627520084">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618627520084" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1618627520068">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618627520068" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1618627520068">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618627520068" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1618627520084">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618627520084" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1618577599260">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1618577599260" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618578583311">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618578828410">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618578583311" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618578828410" />
     <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618577957328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
