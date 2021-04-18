@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ca9a279-bb13-497c-9504-5b22493cd2e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Socket/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Socket/proto.go" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/proto.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Socket/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Pack/Pack.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/Pack/Pack.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -70,16 +69,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="删了一些乐色文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="删了一些乐色文件" />
+    <MESSAGE value="优化一些代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化一些代码" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1618578824778">
+    <state x="281" y="0" key="CommitChangelistDialog2" timestamp="1618627985018">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1618578824778" />
+    <state x="281" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1618627985018" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1618577819868">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -96,30 +96,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="544" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1618578088573" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1618627520084">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1618731821200">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618627520084" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1618627520068">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618731821200" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1618731821200">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618627520068" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1618627520068">
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618731821200" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1618731821200">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618627520068" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1618627520084">
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618731821200" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1618731821200">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618627520084" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618731821200" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1618731821200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618731821200" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1618731821200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1618731821200" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1618731821200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1618731821200" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1618731821200">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1618731821200" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1618577599260">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1618577599260" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618578828410">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1618627988518">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618578828410" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1618627988518" />
     <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1618577957328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -132,5 +148,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="258" key="git4idea.ui.GitResetDialog/0.0.1366.728@0.0.1366.728" timestamp="1618577921782" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Socket/server.go</url>
+          <line>119</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Socket/server.go</url>
+          <line>90</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

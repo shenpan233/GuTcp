@@ -16,13 +16,14 @@ type GuTcpServer struct {
 	listener          net.Listener
 	user              *sync.Map
 	userId            *uint64
-	heartBoatTime     int64
+	heartBoatTime     time.Duration
 	onRecvHandlerFunc OnServerRecvHandlerFunc
 }
 
 type clientMsg struct {
-	conn  net.Conn
-	cache []byte
+	conn      net.Conn
+	cache     []byte
+	heartBoat chan int
 }
 
 //Creat
@@ -47,7 +48,7 @@ func (t *GuTcpServer) Creat(port int) {
 //SetHeartBoatTime 设置心跳时间
 //  time 单位秒
 func (t *GuTcpServer) SetHeartBoatTime(i int) {
-	t.heartBoatTime = int64(time.Duration(i) * time.Second)
+	t.heartBoatTime = time.Duration(i) * time.Second
 }
 
 //BindingEvent 绑定事件
@@ -62,10 +63,13 @@ func (t *GuTcpServer) accept() {
 		if err == nil {
 			atomic.AddUint64(t.userId, 1)
 			uid := atomic.LoadUint64(t.userId)
-			t.user.Store(uid, &clientMsg{
-				conn: conn,
-			})
+			msg := &clientMsg{
+				conn:      conn,
+				heartBoat: make(chan int),
+			}
+			t.user.Store(uid, msg)
 			go t.recv(uid)
+			go t.heartBoating(msg)
 		}
 	}
 
@@ -75,6 +79,18 @@ func (t *GuTcpServer) accept() {
 // 	uid 用户标识id
 //	bin 已截取长度的封包
 type OnServerRecvHandlerFunc func(userId uint64, bin []byte)
+
+func (t *GuTcpServer) heartBoating(conn *clientMsg) {
+	for {
+		select {
+		case <-time.After(t.heartBoatTime):
+			_ = conn.conn.Close()
+			return
+		case <-(*&conn.heartBoat):
+			break
+		}
+	}
+}
 
 //recv 接收数据
 func (t *GuTcpServer) recv(uid uint64) {
@@ -99,7 +115,13 @@ func (t *GuTcpServer) recv(uid uint64) {
 					l, _ = conn.conn.Read(bin[:])
 					Pack.BufAdd(&data, bin[:l])
 				}
-				go t.onRecvHandlerFunc(uid, UnPack.BufGet(&data, uint(dataLen)))
+				if dataLen > 0 {
+					if t.onRecvHandlerFunc != nil {
+						conn.heartBoat <- 1
+						go t.onRecvHandlerFunc(uid, UnPack.BufGet(&data, uint(dataLen)))
+
+					}
+				}
 
 			}
 		} else {
@@ -134,7 +156,6 @@ func (t *GuTcpServer) Send(UserId uint64, bin []byte) (err error) {
 		conn := v.(*clientMsg)
 		Encode(&bin)
 		_, err = conn.conn.Write(bin)
-		fmt.Println(bin)
 	} else {
 		err = errors.New(fmt.Sprintf("无法通过客户端ID(%d)找到此客户端,请检查是否已连接或已断开", UserId))
 	}
