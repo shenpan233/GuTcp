@@ -26,10 +26,10 @@ type clientMsg struct {
 	heartBoat chan int
 }
 
-//Creat
+//Create
 // 创建tcp服务,成功返回true,失败返回false并在控制台打印错误信息
 //	port 端口号
-func (t *GuTcpServer) Creat(port int) {
+func (t *GuTcpServer) Create(port int) {
 	if t.user == nil {
 		t.userId = new(uint64)
 		t.user = new(sync.Map)
