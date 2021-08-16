@@ -1,7 +1,7 @@
-package Socket
+package GuTcp
 
 import (
-	"github.com/shenpan233/guTcpSocket/util/Pack"
+	"github.com/shenpan233/GuTcp/util/Pack"
 )
 
 // Encode 将消息编码

@@ -1,9 +1,9 @@
-package Socket
+package GuTcp
 
 import (
 	"fmt"
-	"github.com/shenpan233/guTcpSocket/util/Pack"
-	"github.com/shenpan233/guTcpSocket/util/UnPack"
+	"github.com/shenpan233/GuTcp/util/Pack"
+	"github.com/shenpan233/GuTcp/util/UnPack"
 	"net"
 	"sync"
 	"sync/atomic"
